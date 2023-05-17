@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>ENCRIPTADOR - SAMUEL GUZMÁN</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <header>
+    
+                <img class="logo" src="./imagenes/logo.png" alt="Logo de Alura">
+                <h1>ENCRIPTADOR/DESENCRIPTADOR DE MENSAJES</h1>
+                
+        </header>
+    
+        <main>
+
+            <section class="codificado">
+
+                <textarea class="text-area" cols="40" rows="8" oninput="this.value = this.value.replace(/[^a-zA-Z ]/,'')" required placeholder="Ingresa el texto aquí"></textarea>
+                <div>
+                    <img src="imagenes/exclamation-circle-fill.svg" alt="icono de exclamacion" class="ico"><h4 class="informacion">Solo letras minúsculas y sin acentos</h4>
+                </div>
+                <div class="botones">
+                    <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                    <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                </div>
+
+            </section>
+
+            <section class="decodificado">
+                <aside class="recuadro">
+                    
+                    <textarea id='textarea' class="mensaje" cols="20" rows="11" placeholder="Ingresa el mensaje a Encriptar o Desencriptar"></textarea>
+                    <div>
+                        <button id='copyBlock' class="btn-copiar">Copiar</button><span id="copyAnswer"></span>
+                    </div>
+
+                </aside>    
+
+            </section>
+           
+        </main>
+
+        <footer>
+            <p class="copyright">&copy Hecho por Samuel Guzmán - Oracle ONE - 2023</p>  
+        </footer>
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>
